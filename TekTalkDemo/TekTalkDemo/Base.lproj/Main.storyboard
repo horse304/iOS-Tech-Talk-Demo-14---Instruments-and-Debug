@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9pv-A4-QxB">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="zzt-Iz-6Eg">
+            <objects>
+                <viewController id="LoN-80-0U2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tpw-Ge-war"/>
+                        <viewControllerLayoutGuide type="bottom" id="V2w-Rq-McQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rgq-gr-17g">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.66893136501312256" green="0.95070558786392212" blue="0.70539647340774536" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CaK-cf-q7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="360" y="-115"/>
+        </scene>
+        <!--Images-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="ImageViewController" customModule="TekTalkDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zVR-Ds-nau">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZzU-zu-92v">
+                                    <size key="itemSize" width="80" height="80"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="ImageCell" id="qF8-Yv-EFi" customClass="ImageCellView" customModule="TekTalkDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FmR-ne-FHT" customClass="SmartImageView" customModule="TekTalkDemo" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="FmR-ne-FHT" secondAttribute="trailing" id="LzW-10-Ajz"/>
+                                            <constraint firstAttribute="bottom" secondItem="FmR-ne-FHT" secondAttribute="bottom" id="NaS-AH-XGd"/>
+                                            <constraint firstItem="FmR-ne-FHT" firstAttribute="leading" secondItem="qF8-Yv-EFi" secondAttribute="leading" id="TIm-y3-jm4"/>
+                                            <constraint firstItem="FmR-ne-FHT" firstAttribute="top" secondItem="qF8-Yv-EFi" secondAttribute="top" id="Uag-af-PXc"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="FmR-ne-FHT" id="0wi-AP-jaq"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="adZ-1M-qN6"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="hhp-LT-0LV"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zVR-Ds-nau" secondAttribute="trailing" id="2SI-pt-lVJ"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="zVR-Ds-nau" secondAttribute="bottom" id="6aQ-fV-3cC"/>
+                            <constraint firstItem="zVR-Ds-nau" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="Z89-al-kDW"/>
+                            <constraint firstItem="zVR-Ds-nau" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="oqg-Ba-VGx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Images" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="collectionView" destination="zVR-Ds-nau" id="HBS-wg-XKf"/>
+                        <outlet property="flowLayout" destination="ZzU-zu-92v" id="6yf-Q3-AQq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+    </resources>
+</document>

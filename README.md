@@ -43,6 +43,7 @@ Debug with LLDB:
 * http://natashatherobot.com/xcode-debugging-trick/
 * https://medium.com/hacking-ios/memory-management-in-swift-principles-prevention-and-cures-31116ae0834f#.gw4tvx9pc
 * http://sketchytech.blogspot.in/2014/09/swift-rules-of-weak-and-unowned.html
+* http://krakendev.io/blog/weak-and-unowned-references-in-swift
 * https://www.objc.io/issues/19-debugging/dtrace/
 * http://nshipster.com/quick-look-debugging/
 

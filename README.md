@@ -1,5 +1,7 @@
 # iOS-Tech-Talk-Demo-14---Instruments-and-Debug
 
+## Video tech talk (Vietnamese only): https://www.youtube.com/watch?v=nHiDWzZTvKM
+
 ###Instruments UI introduction
 https://developer.apple.com/library/tvos/documentation/DeveloperTools/Conceptual/InstrumentsUserGuide/LaunchingInstruments.html#//apple_ref/doc/uid/TP40004652-CH7-SW1
 ###Instruments most used tools
